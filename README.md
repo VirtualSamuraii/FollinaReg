@@ -8,7 +8,7 @@ The results (URLs and VirusTotal scans) are stored in a file.
 ## How to install
 
 ```
-git clone https://github.com/VirtualSamuraii/FollinaReg
+git clone https://github.com/VirtualSamuraii/FollinaReg.git
 cd FollinaReg
 pip install -r requirements.txt
 ```
