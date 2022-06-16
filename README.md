@@ -1,5 +1,7 @@
 # FollinaReg
 
+![](img.png)
+
 This is a simple python script to automate collection of artifacts for Follina (CVE-2022-30190) exploit on Windows workstations.
 The script expects a list of computers and checks registry keys for each user on each computer on the list.
 Each domain is scanned using VirusTotal API.
