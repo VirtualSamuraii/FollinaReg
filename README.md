@@ -24,7 +24,7 @@ Create a text file containing a computer name (e.g \\\\DESKTOP-8SG7NX) on each l
 And run the script with :
 
 ```
-python3 FollinaReg.py -l YOUR_COMPUTERS_LIST_FILE.txt
+python FollinaReg.py -l YOUR_COMPUTERS_LIST_FILE.txt
 ```
 
 ## Troubleshooting
