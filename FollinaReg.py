@@ -76,7 +76,11 @@ def investigateRegistry(computer):
         results_file.write("SID: " + sid + "\n")
         path = sid + r"\SOFTWARE\Microsoft\Office\16.0\Common\Internet\Server Cache"
         access_registry = winreg.ConnectRegistry(computer,winreg.HKEY_USERS)
-        access_key = winreg.OpenKey(access_registry, path)
+        try:
+            access_key = winreg.OpenKey(access_registry, path)
+        except Exception as e:
+            print("There's no registry key on this computer !\n")
+            break
         #accessing the key to open the registry directories under
         for n in range(100):
            try:
