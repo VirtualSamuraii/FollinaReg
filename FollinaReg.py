@@ -79,16 +79,24 @@ def investigateRegistry(computer):
         try:
             access_key = winreg.OpenKey(access_registry, path)
         except Exception as e:
-            print("There's no registry key on this computer !\n")
+            if e.errno == 2:
+                print("There's no registry key on this computer !\n")
+            elif e.errno == 53:
+                print("Unknown computer !\n")
+            else:
+                print(e)
             break
         #accessing the key to open the registry directories under
-        for n in range(100):
-           try:
-              item = winreg.EnumKey(access_key,n)
-              urls.append(item)
-              print(item)
-           except:
-              break
+        try:
+            i = 0
+            while True:
+                item = winreg.EnumKey(access_key,i)
+                urls.append(item)
+                print(item)
+                i += 1
+        except:
+            break
+
 
     for url in urls:
         analysis = scanVT(url)
