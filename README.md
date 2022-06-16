@@ -19,7 +19,7 @@ Create accounts on VirusTotal and urlscan.io and get yourself some API keys.
 
 Put your API keys in the conf.cfg file.
 
-Create a text file containing a computer name (e.g \\DESKTOP-8SG7NX) on each line.
+Create a text file containing a computer name (e.g \\\\DESKTOP-8SG7NX) on each line.
 
 And run the script with :
 
